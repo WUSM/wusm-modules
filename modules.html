@@ -3,7 +3,7 @@
 <title>Modules</title>
 <style>
 * {
-	box-sizing: border-width;
+	box-sizing: border-box;
 }
 body {
 	font-family: Arial, sans-serif;
@@ -15,15 +15,24 @@ a {
 ul {
 	list-style: none;
 	display: inline-block;
+	padding-left: 0;
 }
 article {
 	border-bottom: 1px solid #9e9e9e;
 	width: 1020px;
 	margin: 0 auto;
 	padding: 20px;
+	position: relative;
 }
-h2 {
+h2,
+.featured-images {
 	text-align: center;
+}
+h2.half {
+	margin: 0 auto;
+}
+h3 {
+	border-bottom: 1px solid #eaeaea;
 }
 button {
 	color: #fff;
@@ -32,39 +41,63 @@ button {
 	text-transform: uppercase;
 	padding: 10px 40px;
 }
+.centered {
+	text-align: center;
+	margin: 0 auto;
+}
 .cta button{
 	background-color: #fff;
 	color: #40b89f;
 }
 .text-sidebar-links p {
-	width: 66%;
+	text-align: left;
+}
+p {
 	display: inline-block;
 }
 .sidebar {
 	width: 33%;
 	border: 1px solid #eaeaea;
 	display: inline-block;
+	padding: 10px 20px;
+	border-radius: 3px;
 }
-.text-cta-button {
-	text-align: center;
+.secondary-external-links li,
+.sidebar p {
+	border-bottom: 1px solid #eaeaea;
 }
 .cta {
+	border-bottom: 1px solid #fff;
 	color: #fff;
 	background-color: #40b89f;
 }
+.cta div {
+	display: inline-block;
+}
+div.half,
+div.third,
+div.quarter {
+	display: inline-block;
+}
+.top-align {
+	vertical-align: top;
+}
 .half {
-	width: 50%;
+	width: 49%;
 }
 .third {
 	width: 33%;
 }
+.quarter {
+	width: 25%;
+}
 </style>
 </head>
 <body>
-	<article class="text-sidebar-links">
+	<article class="text-sidebar-links centered">
 		<h2>Optional Header H2</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, voluptas, cupiditate, eum facilis reiciendis voluptate illum nemo ipsum nam natus tenetur sunt modi neque tempora saepe hic adipisci nobis vero asperiores recusandae nulla ullam quasi quibusdam ratione repellendus possimus accusamus corporis sint rerum aliquam. Vero, rem, esse nisi fugiat sint natus quis dolore voluptates doloremque consequatur architecto id laudantium harum accusamus omnis molestias culpa fugit officia magni quibusdam incidunt voluptatibus commodi blanditiis. Cum, labore sed quae accusamus autem perferendis vitae! Magni modi inventore velit illum.</p>
-		<div class="sidebar">
+		<p class="half top-align">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, voluptas, cupiditate, eum facilis reiciendis voluptate illum nemo ipsum nam natus tenetur sunt modi neque tempora saepe hic adipisci nobis vero asperiores recusandae nulla ullam quasi quibusdam ratione repellendus possimus accusamus corporis sint rerum aliquam. Vero, rem, esse nisi fugiat sint natus quis dolore voluptates doloremque consequatur architecto id laudantium harum accusamus omnis molestias culpa fugit officia magni quibusdam incidunt voluptatibus commodi blanditiis. Cum, labore sed quae accusamus autem perferendis vitae! Magni modi inventore velit illum.</p>
+		<div class="sidebar quarter">
 			<h3>Header for this section</h3>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, voluptates veniam animi minima repellat praesentium.</p>
 			<ul>
@@ -76,14 +109,15 @@ button {
 			</ul>
 		</div>
 	</article>
-	<article class="text-cta-button">
-		<h2>Optional Header H2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, tenetur?</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, expedita, veniam, repellendus aliquid fugiat dolores hic magnam asperiores similique consequatur tenetur earum nobis accusamus doloremque nostrum unde rerum consectetur. Quo, fuga, sunt, dolorem quam fugit autem amet accusantium corporis nihil explicabo perspiciatis nostrum maxime molestias aut esse veniam cum sequi dicta! Mollitia, voluptas ducimus accusantium hic nisi officiis sapiente ipsa in officia voluptatem maxime sit aperiam distinctio illo minus cum voluptates. Fugit, est, aliquam iste facilis autem iusto ipsam temporibus molestiae mollitia asperiores esse harum.</p>
+	<article class="text-cta-button centered">
+		<h2 class="half">Optional Header H2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, tenetur?</h2>
+		<p class="half">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, expedita, veniam, repellendus aliquid fugiat dolores hic magnam asperiores similique consequatur tenetur earum nobis accusamus doloremque nostrum unde rerum consectetur. Quo, fuga, sunt, dolorem quam fugit autem amet accusantium corporis nihil explicabo perspiciatis nostrum maxime molestias aut esse veniam cum sequi dicta! Mollitia, voluptas ducimus accusantium hic nisi officiis sapiente ipsa in officia voluptatem maxime sit aperiam distinctio illo minus cum voluptates. Fugit, est, aliquam iste facilis autem iusto ipsam temporibus molestiae mollitia asperiores esse harum.</p>
+		<br>
 		<button>Button (Optional)</button>
 	</article>
 	<article class="secondary-external-links">
 		<h2>Optional Header H2</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, perferendis molestias sapiente quam nostrum aut assumenda libero deserunt itaque fugit!</p>
+		<p class="centered">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, perferendis molestias sapiente quam nostrum aut assumenda libero deserunt itaque fugit!</p>
 		<ul class="third">
 			<li><a href="#">This is a link to a form</a></li>
 			<li><a href="#">This is a link to a PDF</a></li>
@@ -108,15 +142,19 @@ button {
 			<h2>Optional Header H2</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque asperiores voluptatum nisi quis consectetur fuga aliquid saepe quos repudiandae ipsam.</p>
 		</div>
-		<button>Button (Optional)</button>
+		<div class="half">
+			<button>Button (Optional)</button>
+		</div>
 	</article>
 	<article class="cta">
 		<div class="half">
 			<h2>Optional Header H2</h2>
 		</div>
 		<div class="half">
-			<span>TO MAKE AN APPOINTMENT CALL</span>
-			<p class="phone-num">636-555-1234</p>
+			<p class="phone-num">
+			<span class="smaller">TO MAKE AN APPOINTMENT CALL</span>
+			<br>
+			636-555-1234</p>
 		</div>
 	</article>
 	<article class="slider-gallery">
@@ -134,14 +172,18 @@ button {
 	</article>
 	<article class="featured-image-left">
 		<img src="520x340.jpg" alt="">
-		<h2>Optional Header H2</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, fuga, est, ad, nisi quisquam voluptatem dicta nobis eveniet hic ab voluptatibus dolores possimus cum cupiditate neque corporis veniam tenetur optio explicabo placeat minus deleniti libero alias in enim fugit nemo molestiae quam deserunt officiis aperiam dignissimos asperiores.</p>
-		<button>Button (Optional)</button>
+		<div class="third top-align">
+			<h2>Optional Header H2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, fuga, est, ad, nisi quisquam voluptatem dicta nobis eveniet hic ab voluptatibus dolores possimus cum cupiditate neque corporis veniam tenetur optio explicabo placeat minus deleniti libero alias in enim fugit nemo molestiae quam deserunt officiis aperiam dignissimos asperiores.</p>
+			<button>Button (Optional)</button>
+		</div>
 	</article>
 	<article class="featured-image-right">
-		<h2>Optional Header H2</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, fuga, est, ad, nisi quisquam voluptatem dicta nobis eveniet hic ab voluptatibus dolores possimus cum cupiditate neque corporis veniam tenetur optio explicabo placeat minus deleniti libero alias in enim fugit nemo molestiae quam deserunt officiis aperiam dignissimos asperiores.</p>
-		<button>Button (Optional)</button>
+		<div class="third top-align">
+			<h2>Optional Header H2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, fuga, est, ad, nisi quisquam voluptatem dicta nobis eveniet hic ab voluptatibus dolores possimus cum cupiditate neque corporis veniam tenetur optio explicabo placeat minus deleniti libero alias in enim fugit nemo molestiae quam deserunt officiis aperiam dignissimos asperiores.</p>
+			<button>Button (Optional)</button>
+		</div>
 		<img src="520x340.jpg" alt="">
 	</article>
 	<article class="bleeding-image">
@@ -152,32 +194,36 @@ button {
 	</article>
 	<article class="video-left">
 		<iframe width="560" height="315" src="http://www.youtube.com/embed/zNSp6A3O4Do" frameborder="0" allowfullscreen></iframe>
-		<h2>Optional Header H2</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolor expedita obcaecati inventore at soluta. Harum esse possimus ullam quo!</p>
-		<button>Button (Optional)</button>
+		<div class="third top-align">
+			<h2>Optional Header H2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolor expedita obcaecati inventore at soluta. Harum esse possimus ullam quo!</p>
+			<button>Button (Optional)</button>
+		</div>
 	</article>
 	<article class="video-right">
-		<h2>Optional Header H2</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolor expedita obcaecati inventore at soluta. Harum esse possimus ullam quo!</p>
-		<button>Button (Optional)</button>
+		<div class="third top-align">
+			<h2>Optional Header H2</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, dolor expedita obcaecati inventore at soluta. Harum esse possimus ullam quo!</p>
+			<button>Button (Optional)</button>
+		</div>
 		<iframe width="560" height="315" src="http://www.youtube.com/embed/zNSp6A3O4Do" frameborder="0" allowfullscreen></iframe>
 	</article>
 	<article class="featured-images">
 		<div class="third">
 			<img src="260x170.jpg" alt="">
-			<span class="featured-image-label">This Makes Us Awesome</span>
+			<p class="featured-image-label">This Makes Us Awesome</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia maxime cum dicta quaerat neque id ipsa sequi error numquam?</p>
 			<a href="#">Learn More</a>
 		</div>
 		<div class="third">
 			<img src="260x170.jpg" alt="">
-			<span class="featured-image-label">This Makes Us Awesome</span>
+			<p class="featured-image-label">This Makes Us Awesome</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia maxime cum dicta quaerat neque id ipsa sequi error numquam?</p>
 			<a href="#">Learn More</a>
 		</div>
 		<div class="third">
 			<img src="260x170.jpg" alt="">
-			<span class="featured-image-label">This Makes Us Awesome</span>
+			<p class="featured-image-label">This Makes Us Awesome</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam quia maxime cum dicta quaerat neque id ipsa sequi error numquam?</p>
 			<a href="#">Learn More</a>
 		</div>
